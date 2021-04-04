@@ -5,7 +5,7 @@ class Config:
     SECRET_KEY = 'SECRET_KEY'
     
     #SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://tina:Ingabire067@localhost/blog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://tina:tina@localhost/blog'
     UPLOADED_PHOTOS_DEST ='app/static/photos'
 #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
@@ -16,7 +16,7 @@ class Config:
 
 class ProdConfig(Config):
     #SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://tina:Ingabire067@localhost/blog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://tina:tina@localhost/blog'
     pass
 
 
