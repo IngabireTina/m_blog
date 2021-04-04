@@ -4,7 +4,7 @@ from app import db
 
 class CommentModelTest(unittest.TestCase):
     def setUp(self):
-        self.new_comment = Comment(id = 1, comment = 'comment', user = self.user_sisi, blog_id = self.new_blog)
+        self.new_comment = Comment(id = 1, comment = 'comment', user = self.user_tina, blog_id = self.new_blog)
         
     def tearDown(self):
         Blog.query.delete()
@@ -12,15 +12,15 @@ class CommentModelTest(unittest.TestCase):
     
     def test_check_instance_variables(self):
         self.assertEquals(self.new_comment.comment,'comment')
-        self.assertEquals(self.new_comment.user,self.user_sisi)
+        self.assertEquals(self.new_comment.user,self.user_tina)
         self.assertEquals(self.new_comment.blog_id,self.new_blog)
 
 
 class CommentModelTest(unittest.TestCase):
     def setUp(self):
-        self.user_sisi = User(username='sisi', password='sisi', email='sisi@gmail.com')
-        self.new_blog = Blog(id=1, title='Test', post='post', user_id=self.user_sisi.id)
-        self.new_comment = Comment(id=1, comment ='comment', user_id=self.user_sisi.id, blog_id = self.new_blog.id )
+        self.user_tina = User(username='tina', password='tina', email='tina@gmail.com')
+        self.new_blog = Blog(id=1, title='Test', post='post', user_id=self.user_tina.id)
+        self.new_comment = Comment(id=1, comment ='comment', user_id=self.user_tina.id, blog_id = self.new_blog.id )
 
     def tearDown(self):
         Blog.query.delete()
@@ -29,7 +29,7 @@ class CommentModelTest(unittest.TestCase):
 
     def test_check_instance_variables(self):
         self.assertEquals(self.new_comment.comment, 'comment')
-        self.assertEquals(self.new_comment.user_id, self.user_sisi.id)
+        self.assertEquals(self.new_comment.user_id, self.user_tina.id)
         self.assertEquals(self.new_comment.blog_id, self.new_blog.id)
 
     def test_save_comment(self):
