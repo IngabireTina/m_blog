@@ -1,4 +1,4 @@
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark navbarbg" style="background-color: #005c00;">
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark navbarbg" style="background-color: #064c85;">
   <a class="navbar-brand" href="{{url_for('main.index')}}"><strong>MyBlog</strong> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
     aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,13 +7,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{{url_for('main.index')}}">All Posts</a>
+        <a class="nav-link" href="{{url_for('main.index')}}">The Posts</a>
       </li>
 
     </ul>
     <ul class="navbar-nav ml-auto">
       {% if current_user.is_authenticated %}
-      <li><a class="btn btn-sm" style="background-color: #2A850E; color: white;" href="{{url_for('main.new_blog')}}">Create a post </a></li>
+      <li><a class="btn btn-sm" style="background-color: #0a3185; color: white;" href="{{url_for('main.new_blog')}}">Create a post </a></li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style='margin-right:30px' data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
