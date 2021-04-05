@@ -12,7 +12,7 @@ background-repeat: no-repeat; ">
         
         <div class="row">
             <div class="col-md-8">
-                <h3 class="p-2 text-center" style="margin-right:5cm; background-color: rgb(53, 94, 129); color: #e3e5ee;"> <strong>THE BLOG POSTS</strong></h3>
+                <h3 class="p-2 text-center" style="margin-right:5cm; background-color: rgb(53, 94, 129); color: #e3e5ee;"> <strong>THE BLOG POST</strong></h3>
                 <div class="row">
                     {% for blog in blogs %}
                     <div class="card col-md-8 m-3" style="width: 18rem;">
@@ -39,7 +39,7 @@ background-repeat: no-repeat; ">
                     <form class="form-inline ml-2" action="{{url_for('main.subscribe')}}" method="POST">
                         <div class="md-form form-group">
                             <label class="text-light" style="background-color: rgb(53, 94, 129); color: rgb(240, 241, 245);">Email Address...</label>
-                            <input type="email" class="form-control " name="subscriber" required>
+                            <input type="email" class="form-control " name="subscriber" style="color: white;" required>
                         </div>
                         <div class="md-form form-group">
                             <button class="btn btn-sm" style="background-color: rgb(53, 94, 129); color: white;">Subscribe</button>
