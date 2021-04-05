@@ -16,7 +16,7 @@ background-repeat: no-repeat; ">
             style="border-radius: 10px; height:200px;" class="card-img">
           {%else%}
           <img
-            src=""
+            src="../../static/photos/bac.jpg"
             class="rounded-square account-img mt-2" style="border-radius: 5px; height:200px;">
           {% endif %}
           
@@ -31,8 +31,8 @@ background-repeat: no-repeat; ">
           <p> {{current_user.email}} </p>
           <p><i class="fas fa-quote-left"></i> {{current_user.bio}} <i class="fas fa-quote-right"></i> </p>
           <div>
-            <a class="mb-4 btn btn-sm btn-info" href="{{url_for('main.updateprofile',name=user.username)}}">update
-              profile</a>
+            <a class="mb-4 btn btn-sm btn-info" href="{{url_for('main.updateprofile',name=user.username)}}">Update
+              Profile</a>
           </div>
         </div>
       </div>
